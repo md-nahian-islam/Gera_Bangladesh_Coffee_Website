@@ -1,0 +1,465 @@
+<!doctype html>
+<!-- Group name: [ADD GROUP NAME]. Members: [ADD EVERY NAME AND STUDENT ID]. AI-generated reference; see README.txt. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="form-action 'none'; object-src 'none'; base-uri 'self'"
+    />
+    <title>Demo Checkout — Gera Coffee</title>
+    <meta
+      name="description"
+      content="Preview a Gera Coffee sample order, delivery details and Bangladesh payment options. This front-end demo does not place orders or process payments."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#4A281B" />
+    <link
+      rel="canonical"
+      href="https://gera-coffee-ritual.immensebico.chatgpt.site/checkout.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gera Coffee" />
+    <meta property="og:title" content="Demo Checkout — Gera Coffee" />
+    <meta
+      property="og:description"
+      content="Preview a Gera Coffee sample order, delivery details and Bangladesh payment options. This front-end demo does not place orders or process payments."
+    />
+    <meta
+      property="og:url"
+      content="https://gera-coffee-ritual.immensebico.chatgpt.site/checkout.html"
+    />
+    <meta
+      property="og:image"
+      content="https://gera-coffee-ritual.immensebico.chatgpt.site/images/hero.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Gera Coffee demo pouch and espresso cup in a warm studio scene"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/gera-serif.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Demo Checkout — Gera Coffee",
+        "description": "Preview a Gera Coffee sample order, delivery details and Bangladesh payment options. This front-end demo does not place orders or process payments.",
+        "url": "https://gera-coffee-ritual.immensebico.chatgpt.site/checkout.html",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="top-note">
+      Ethiopian Arabica · A little ritual, a richer day
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Gera Coffee home"
+          ><img
+            src="images/gera-coffee-logo.svg"
+            width="143"
+            height="58"
+            alt="Gera Coffee demo logo"
+        /></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          Menu
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+        <nav id="main-navigation" class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="catalog.html">Shop Coffee</a
+          ><a href="product-details.html">Product Details</a
+          ><a href="register.html">Register</a
+          ><a href="checkout.html" aria-current="page" class="nav-checkout"
+            ><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 7h14l1 14H4L5 7Z" />
+              <path d="M8 8V6a4 4 0 0 1 8 0v2" /></svg
+            >Checkout</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro container" aria-labelledby="checkout-heading">
+        <p class="eyebrow">One step closer to your coffee ritual</p>
+        <h1 id="checkout-heading">Complete Your Order.</h1>
+        <p>
+          A simple look at delivery and payment. This is a demonstration; no
+          real order or payment will be made.
+        </p>
+      </section>
+
+      <div class="container form-layout checkout-layout">
+        <form
+          id="checkout-form"
+          class="form-panel"
+          action="#"
+          method="post"
+          autocomplete="off"
+          aria-describedby="checkout-demo"
+        >
+          <p id="checkout-demo" class="notice">
+            <strong>Try it with fictional details.</strong> Your entries are not
+            sent or saved. Payment options below are for demonstration only.
+          </p>
+          <fieldset>
+            <legend>
+              <span class="form-step" aria-hidden="true">01</span> Where should
+              it go?
+            </legend>
+            <p class="small muted">All delivery fields are required.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="checkout-name">Recipient name</label>
+                <input
+                  id="checkout-name"
+                  name="recipient_name"
+                  type="text"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  placeholder="Full name"
+                />
+              </div>
+              <div class="field">
+                <label for="checkout-phone">Mobile number</label>
+                <input
+                  id="checkout-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="01[0-9]{9}"
+                  maxlength="11"
+                  required
+                  placeholder="01XXXXXXXXX"
+                  aria-describedby="checkout-phone-hint"
+                />
+                <small id="checkout-phone-hint" class="field-hint"
+                  >11 digits, starting with 01. No spaces.</small
+                >
+              </div>
+              <div class="field field-full">
+                <label for="checkout-address">Full delivery address</label>
+                <textarea
+                  id="checkout-address"
+                  name="delivery_address"
+                  rows="3"
+                  required
+                  minlength="10"
+                  maxlength="500"
+                  placeholder="House, road and neighbourhood"
+                ></textarea>
+              </div>
+              <div class="field field-full">
+                <label for="checkout-city">Area / city</label>
+                <input
+                  id="checkout-city"
+                  name="city"
+                  type="text"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  placeholder="For example, Dhanmondi, Dhaka"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <span class="form-step" aria-hidden="true">02</span> Choose a
+              payment method
+            </legend>
+            <p class="small muted">
+              Select one to preview the checkout. No payment details are needed.
+            </p>
+            <div class="payment-options">
+              <label class="payment-option" for="payment-bkash"
+                ><input
+                  id="payment-bkash"
+                  name="payment"
+                  type="radio"
+                  value="bkash"
+                  required
+                /><span
+                  ><strong>bKash</strong
+                  ><small>Mobile payment · demo only</small></span
+                ><span
+                  class="payment-mark payment-mark-bkash"
+                  aria-hidden="true"
+                  >bK</span
+                ></label
+              >
+              <label class="payment-option" for="payment-nagad"
+                ><input
+                  id="payment-nagad"
+                  name="payment"
+                  type="radio"
+                  value="nagad"
+                  required
+                /><span
+                  ><strong>Nagad</strong
+                  ><small>Mobile payment · demo only</small></span
+                ><span
+                  class="payment-mark payment-mark-nagad"
+                  aria-hidden="true"
+                  >N</span
+                ></label
+              >
+              <label class="payment-option" for="payment-card"
+                ><input
+                  id="payment-card"
+                  name="payment"
+                  type="radio"
+                  value="card"
+                  required
+                /><span
+                  ><strong>Debit / credit card</strong
+                  ><small>No card information collected</small></span
+                ><span class="payment-mark" aria-hidden="true">▤</span></label
+              >
+              <label class="payment-option" for="payment-cash"
+                ><input
+                  id="payment-cash"
+                  name="payment"
+                  type="radio"
+                  value="cash"
+                  required
+                  checked
+                /><span
+                  ><strong>Cash on delivery</strong
+                  ><small>Illustrative delivery option</small></span
+                ><span class="payment-mark" aria-hidden="true">৳</span></label
+              >
+            </div>
+            <p
+              id="payment-help"
+              class="field-hint payment-help"
+              aria-live="polite"
+            >
+              Cash on delivery selected. This is a demo; no delivery will be
+              arranged.
+            </p>
+          </fieldset>
+
+          <div class="form-actions checkout-actions">
+            <button class="button" type="submit">
+              Place Demo Order <span aria-hidden="true">↗</span>
+            </button>
+            <a class="text-link" href="catalog.html">Continue exploring</a>
+          </div>
+          <p class="small muted">
+            This button validates the form and shows a local preview. It does
+            not submit an order or charge you.
+          </p>
+          <div
+            id="checkout-result"
+            class="form-result"
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+            hidden
+          ></div>
+          <noscript
+            ><p class="notice">
+              JavaScript is disabled. Native field validation still works; the
+              local order preview requires JavaScript. This page cannot place a
+              real order.
+            </p></noscript
+          >
+        </form>
+
+        <aside class="order-summary" aria-labelledby="order-summary-heading">
+          <div class="order-summary-heading">
+            <div>
+              <p class="eyebrow">A considered selection</p>
+              <h2 id="order-summary-heading">In your bag</h2>
+            </div>
+            <span class="bag-count">3 items</span>
+          </div>
+          <p class="small muted">
+            A fixed sample basket, with illustrative prices.
+          </p>
+          <div
+            class="table-wrap checkout-table-wrap"
+            tabindex="0"
+            role="region"
+            aria-label="Sample order summary"
+          >
+            <table class="checkout-items">
+              <caption>
+                Three coffees in this demo order. All prices in Bangladeshi taka
+                (Tk).
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Unit price</th>
+                  <th scope="col">Line total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Arabica Classic Whole Beans
+                    <span class="order-product-meta">250 g · GER-003</span>
+                  </th>
+                  <td>1</td>
+                  <td>Tk 650</td>
+                  <td>Tk 650</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Arabica Classic Ground
+                    <span class="order-product-meta">250 g · GER-004</span>
+                  </th>
+                  <td>1</td>
+                  <td>Tk 650</td>
+                  <td>Tk 650</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Arabica Classic Whole Beans
+                    <span class="order-product-meta">100 g · GER-001</span>
+                  </th>
+                  <td>1</td>
+                  <td>Tk 300</td>
+                  <td>Tk 300</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="3">Subtotal</th>
+                  <td>Tk 1,600</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3">
+                    Delivery charge <span class="muted">(sample)</span>
+                  </th>
+                  <td>Tk 80</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3">
+                    VAT <span class="muted">(illustrative)</span>
+                  </th>
+                  <td>Tk 80</td>
+                </tr>
+                <tr class="checkout-total">
+                  <th scope="row" colspan="3">Grand total</th>
+                  <td>Tk 1,760</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="order-note">
+            <span aria-hidden="true">✳</span>
+            <p>
+              Whole beans for the slow mornings. Ground coffee for the days that
+              move a little faster.
+            </p>
+          </div>
+          <p class="small muted">
+            Delivery and VAT amounts are sample figures, not a statement of
+            applicable tax or a delivery quote.
+          </p>
+          <a class="text-link" href="product-details.html"
+            >Take another look at the coffee
+            <span aria-hidden="true">↗</span></a
+          >
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html"
+              ><img
+                src="images/gera-coffee-logo.svg"
+                alt="Gera Coffee home"
+                width="140"
+                height="57"
+                loading="lazy"
+            /></a>
+            <p>From Ethiopian highlands to your everyday ritual.</p>
+          </div>
+          <div>
+            <h2>Find your coffee</h2>
+            <ul>
+              <li><a href="catalog.html">The collection</a></li>
+              <li>
+                <a href="catalog.html?category=Whole%20beans">Whole beans</a>
+              </li>
+              <li>
+                <a href="catalog.html?category=Ground%20coffee"
+                  >Ground coffee</a
+                >
+              </li>
+              <li>
+                <a href="catalog.html?category=Caf%C3%A9%2Fbusiness%20pack"
+                  >Café &amp; business</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Around here</h2>
+            <ul>
+              <li><a href="index.html#our-story">Our story</a></li>
+              <li><a href="register.html">Join the ritual</a></li>
+              <li><a href="checkout.html">Demo checkout</a></li>
+              <li><a href="admin.html">Store dashboard ↗</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Say hello</h2>
+            <address>
+              Dhaka, Bangladesh<br /><a href="mailto:hello@gera.example"
+                >hello@gera.example</a
+              >
+            </address>
+            <p class="small muted">Sample contact details</p>
+            <ul>
+              <li>
+                <a href="#social-note" data-social="Instagram">Instagram ↗</a>
+                &nbsp;
+                <a href="#social-note" data-social="Facebook">Facebook ↗</a>
+              </li>
+            </ul>
+            <p class="small muted" id="social-note">
+              Social profiles coming soon.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Gera Coffee. Made for the everyday ritual.</span
+          ><span
+            >Demo storefront · Illustrative products, images &amp; prices</span
+          >
+        </div>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

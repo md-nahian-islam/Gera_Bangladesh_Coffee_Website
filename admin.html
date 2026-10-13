@@ -1,0 +1,452 @@
+<!doctype html>
+<!-- Group name: [ADD GROUP NAME]. Members: [ADD EVERY MEMBER NAME AND STUDENT ID]. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Gera Coffee demonstration dashboard with sample orders, sales, products, and members. All figures are fictional."
+    />
+    <meta name="theme-color" content="#4A281B" />
+    <title>Store Dashboard — Gera Coffee Demo</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <a class="admin-skip" href="#admin-main">Skip to dashboard</a>
+    <div class="admin-layout">
+      <!-- Separate dashboard navigation -->
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="index.html" aria-label="Gera Coffee home"
+          >gera<span>COFFEE · STORE DESK</span></a
+        >
+        <p class="admin-nav-label">WORKSPACE</p>
+        <nav class="admin-nav" aria-label="Administration">
+          <a class="admin-nav-active" href="admin.html" aria-current="page"
+            ><span aria-hidden="true">◫</span> Dashboard</a
+          >
+          <a href="#orders"
+            ><span aria-hidden="true">≡</span> Orders
+            <span class="admin-nav-count">6</span></a
+          >
+          <a href="#products"><span aria-hidden="true">◇</span> Products</a>
+          <a href="#members"><span aria-hidden="true">◎</span> Members</a>
+          <a href="#reports"><span aria-hidden="true">▥</span> Reports</a>
+        </nav>
+        <div class="admin-sidebar-bottom">
+          <div class="admin-sidebar-note">
+            <span class="admin-small-dot" aria-hidden="true"></span> DEMO
+            WORKSPACE
+            <p>A little look behind the counter.</p>
+          </div>
+          <a class="admin-back" href="index.html"
+            >← <span>Back to store</span></a
+          >
+        </div>
+      </aside>
+
+      <div class="admin-content">
+        <header class="admin-topbar">
+          <p>
+            Store management <span aria-hidden="true">/</span>
+            <strong>Overview</strong>
+          </p>
+          <div class="admin-profile">
+            <span class="admin-avatar" aria-hidden="true">GA</span
+            ><span
+              ><strong>Gera Administrator</strong
+              ><small>Demo administrator</small></span
+            >
+          </div>
+        </header>
+
+        <main id="admin-main" class="admin-main">
+          <div class="admin-heading">
+            <div>
+              <p class="admin-eyebrow">THE DAILY GRIND</p>
+              <h1>Your store, at a glance.</h1>
+              <p>Good coffee. Clear numbers. A thoughtful start to the day.</p>
+            </div>
+            <p class="admin-date">
+              <span aria-hidden="true">◷</span> 13 October 2026
+            </p>
+          </div>
+          <p class="admin-demo-note">
+            <strong>Demo dashboard.</strong> All customers, orders, stock
+            levels, and figures are fictional. This page has no authentication
+            or live data.
+          </p>
+
+          <!-- Four summary cards use the same figures as the tables below. -->
+          <section class="admin-stats" aria-label="Today's summary">
+            <article class="admin-stat">
+              <h2>Today’s revenue <span aria-hidden="true">৳</span></h2>
+              <strong>Tk 1,850</strong
+              ><small>2 delivered orders · merchandise only</small>
+            </article>
+            <article class="admin-stat">
+              <h2>Orders <span aria-hidden="true">≡</span></h2>
+              <strong>06</strong><small>All six orders shown below</small>
+            </article>
+            <article class="admin-stat">
+              <h2>New members <span aria-hidden="true">◎</span></h2>
+              <strong>03</strong><small>Three sample registrations today</small>
+            </article>
+            <article class="admin-stat admin-stat-alert">
+              <h2>Low-stock items <span aria-hidden="true">!</span></h2>
+              <strong>02</strong><small>Two products need a closer look</small>
+            </article>
+          </section>
+
+          <div class="admin-report-grid">
+            <!-- The chart is constructed entirely with HTML and CSS. -->
+            <section
+              id="reports"
+              class="admin-panel admin-report"
+              aria-labelledby="admin-sales-title"
+            >
+              <div class="admin-panel-heading">
+                <div>
+                  <p class="admin-eyebrow">A LITTLE PERSPECTIVE</p>
+                  <h2 id="admin-sales-title">Monthly sales</h2>
+                </div>
+                <span class="admin-period">Apr — Sep 2026</span>
+              </div>
+              <div class="admin-chart-summary">
+                <strong>Tk 235,000</strong
+                ><span
+                  >Sample merchandise revenue<br />across the six months
+                  below</span
+                >
+              </div>
+              <figure class="admin-chart">
+                <div
+                  class="admin-bars"
+                  role="list"
+                  aria-label="Sample monthly revenue in Bangladeshi taka"
+                >
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">28,000</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-apr"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">Apr</span>
+                  </div>
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">34,000</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-may"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">May</span>
+                  </div>
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">31,500</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-jun"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">Jun</span>
+                  </div>
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">42,000</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-jul"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">Jul</span>
+                  </div>
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">46,500</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-aug"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">Aug</span>
+                  </div>
+                  <div class="admin-bar-item" role="listitem">
+                    <span class="admin-bar-value">53,000</span>
+                    <div class="admin-bar-track">
+                      <span
+                        class="admin-bar admin-bar-sep"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <span class="admin-bar-label">Sep</span>
+                  </div>
+                </div>
+                <figcaption>
+                  <span class="admin-chart-key" aria-hidden="true"></span>
+                  Merchandise revenue (Tk). Fictional monthly totals; bars share
+                  the same scale.
+                </figcaption>
+              </figure>
+            </section>
+
+            <section
+              class="admin-panel admin-stock"
+              aria-labelledby="admin-stock-title"
+            >
+              <div class="admin-panel-heading">
+                <div>
+                  <p class="admin-eyebrow">KEEP AN EYE ON</p>
+                  <h2 id="admin-stock-title">Running low</h2>
+                </div>
+                <span class="admin-alert-count">2 items</span>
+              </div>
+              <ul class="admin-stock-list">
+                <li>
+                  <span class="admin-stock-sku">GER-005 · WHOLE BEANS</span>
+                  <h3>Signature Roast Whole Beans 250 g</h3>
+                  <p>Tk 750 <span>6 packs left</span></p>
+                  <div class="admin-stock-track" aria-hidden="true">
+                    <span class="admin-stock-level-six"></span>
+                  </div>
+                </li>
+                <li>
+                  <span class="admin-stock-sku">GER-008 · GROUND COFFEE</span>
+                  <h3>Arabica Ground 500 g</h3>
+                  <p>Tk 1,200 <span>4 packs left</span></p>
+                  <div class="admin-stock-track" aria-hidden="true">
+                    <span class="admin-stock-level-four"></span>
+                  </div>
+                </li>
+              </ul>
+              <a class="admin-text-link" href="catalog.html"
+                >View coffee catalog <span aria-hidden="true">↗</span></a
+              >
+            </section>
+          </div>
+
+          <!-- Recent orders: all amounts are merchandise totals, not payment requests. -->
+          <section
+            id="orders"
+            class="admin-panel admin-orders"
+            aria-labelledby="admin-orders-title"
+          >
+            <div class="admin-panel-heading">
+              <div>
+                <p class="admin-eyebrow">FROM THE COUNTER</p>
+                <h2 id="admin-orders-title">Recent orders</h2>
+              </div>
+              <span class="admin-period">6 sample orders</span>
+            </div>
+            <div
+              class="admin-table-wrap"
+              tabindex="0"
+              role="region"
+              aria-label="Recent orders, scroll horizontally on small screens"
+            >
+              <table class="admin-table">
+                <caption>
+                  Orders for 13 October 2026. Amounts show merchandise only,
+                  excluding delivery and tax.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Payment method</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">#GER-1026</th>
+                    <td>
+                      Nadia Rahman<small>1 × GER-003 · 250 g whole beans</small>
+                    </td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 650</td>
+                    <td>bKash</td>
+                    <td>
+                      <span class="admin-status status--delivered"
+                        >Delivered</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">#GER-1025</th>
+                    <td>
+                      Arif Hasan<small>1 × GER-007 · 500 g whole beans</small>
+                    </td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 1,200</td>
+                    <td>Cash on delivery</td>
+                    <td>
+                      <span class="admin-status status--delivered"
+                        >Delivered</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">#GER-1024</th>
+                    <td>
+                      Farhana Islam<small
+                        >1 × GER-005 · 250 g signature beans</small
+                      >
+                    </td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 750</td>
+                    <td>Nagad</td>
+                    <td>
+                      <span class="admin-status status--pending">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">#GER-1023</th>
+                    <td>Rafi Ahmed<small>1 × GER-004 · 250 g ground</small></td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 650</td>
+                    <td>bKash</td>
+                    <td>
+                      <span class="admin-status status--shipped">Shipped</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">#GER-1022</th>
+                    <td>
+                      Ayesha Karim<small>1 × GER-011 · 1 kg café beans</small>
+                    </td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 2,250</td>
+                    <td>Debit/credit card</td>
+                    <td>
+                      <span class="admin-status status--shipped">Shipped</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">#GER-1021</th>
+                    <td>
+                      Tanvir Chowdhury<small>1 × GER-002 · 100 g ground</small>
+                    </td>
+                    <td><time datetime="2026-10-13">13 Oct 2026</time></td>
+                    <td>Tk 300</td>
+                    <td>Cash on delivery</td>
+                    <td>
+                      <span class="admin-status status--cancelled"
+                        >Cancelled</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="admin-table-note">
+              Revenue above counts only the two delivered orders: Tk 650 + Tk
+              1,200 = Tk 1,850. Payment methods are illustrative.
+            </p>
+          </section>
+
+          <div class="admin-bottom-grid">
+            <section
+              id="products"
+              class="admin-panel"
+              aria-labelledby="admin-products-title"
+            >
+              <div class="admin-panel-heading">
+                <div>
+                  <p class="admin-eyebrow">THE CROWD FAVOURITES</p>
+                  <h2 id="admin-products-title">Top-selling coffee</h2>
+                </div>
+                <span class="admin-period">September sample</span>
+              </div>
+              <ol class="admin-product-list">
+                <li>
+                  <span class="admin-product-rank">01</span>
+                  <div>
+                    <h3>Arabica Classic Whole Beans 250 g</h3>
+                    <p>GER-003 · Tk 650</p>
+                  </div>
+                  <strong>32 <small>packs</small></strong>
+                </li>
+                <li>
+                  <span class="admin-product-rank">02</span>
+                  <div>
+                    <h3>Arabica Classic Ground 250 g</h3>
+                    <p>GER-004 · Tk 650</p>
+                  </div>
+                  <strong>24 <small>packs</small></strong>
+                </li>
+                <li>
+                  <span class="admin-product-rank">03</span>
+                  <div>
+                    <h3>Café Pack Whole Beans 1 kg</h3>
+                    <p>GER-011 · Tk 2,250</p>
+                  </div>
+                  <strong>6 <small>packs</small></strong>
+                </li>
+              </ol>
+              <p class="admin-panel-note">
+                Top three contribute Tk 49,900 of September’s Tk 53,000 sample
+                sales.
+              </p>
+            </section>
+            <section
+              id="members"
+              class="admin-panel"
+              aria-labelledby="admin-members-title"
+            >
+              <div class="admin-panel-heading">
+                <div>
+                  <p class="admin-eyebrow">OUR COFFEE CIRCLE</p>
+                  <h2 id="admin-members-title">New members</h2>
+                </div>
+                <span class="admin-period">Today</span>
+              </div>
+              <ul class="admin-member-list">
+                <li>
+                  <span class="admin-member-avatar" aria-hidden="true">NR</span>
+                  <div>
+                    <h3>Nadia Rahman</h3>
+                    <p>Dhaka · Whole beans</p>
+                  </div>
+                  <span class="admin-member-tag">Home</span>
+                </li>
+                <li>
+                  <span class="admin-member-avatar" aria-hidden="true">AH</span>
+                  <div>
+                    <h3>Arif Hasan</h3>
+                    <p>Chattogram · Ground coffee</p>
+                  </div>
+                  <span class="admin-member-tag">Home</span>
+                </li>
+                <li>
+                  <span class="admin-member-avatar" aria-hidden="true">AK</span>
+                  <div>
+                    <h3>Ayesha Karim</h3>
+                    <p>Sylhet · Café/business packs</p>
+                  </div>
+                  <span class="admin-member-tag">Business</span>
+                </li>
+              </ul>
+              <p class="admin-panel-note">
+                Fictional member names and preferences for this demonstration.
+              </p>
+            </section>
+          </div>
+        </main>
+        <footer class="admin-footer">
+          <p>© 2026 Gera Coffee · A considered coffee experience.</p>
+          <p>Academic demonstration · No live store data</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
